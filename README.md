@@ -13,6 +13,7 @@ This is a Python Django web application that allows users to sign up, log in, an
 ## Installation
 * Clone this repository to your local machine. 
 * Navigate to the project directory in your terminal.
+* Change the DIRS in settings.py TEMPLATE according to file locate 
 * Run the application using python manage.py runserver.
 ## Technologies Used
 
