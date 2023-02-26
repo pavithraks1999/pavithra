@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    border: 1px solid black;
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+    width: 700px;
+    height: fit-content;
+    padding: 20px;
+}
+
+.main_content {
+    margin: 24px;
+}
+
+label {
+    display: inline-block;
+    margin-right: 10px;
+    width: 100px;
+}
+
+input {
+    padding: 5px;
+}
+
+.submit_btn {
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 18px;
+    background-color: rgb(75, 126, 162);
+    color: whitesmoke;
+}
+
+.submit_btn:hover {
+    background-color: rgb(3, 136, 232);
+    cursor: pointer;
+}
+
+.messages {
+    height: 20px;
+    color: red;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: #fff;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #444;
+}

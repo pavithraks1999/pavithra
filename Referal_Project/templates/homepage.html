@@ -1,0 +1,33 @@
+ {% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Document</title>
+</head>
+
+<body>
+    {% block content %}
+    <div class="main">
+        <h1>Welcome, {{username}}</h1><br/><br/>
+        <h2>You'r reference code is:{{referal_code}}</h2>
+        <br/>
+        <div>
+            <h3>You have referred</h3><br/>
+            <h1>{{number_of_referred}}</h1><br/>
+            <h3>users</h3>
+        </div><br/>
+        <div>
+            {% for name in users_reffered %}
+            <span style="font-size: 22px;font-weight: 200;float: left; margin-left: 200px;">Name:</span>
+            <span style="font-size: 22px; text-decoration: underline;">{{ name.username }}</span><br/> {% endfor %}
+        </div>
+    </div>
+    {% endblock %}
+</body>
+
+</html>

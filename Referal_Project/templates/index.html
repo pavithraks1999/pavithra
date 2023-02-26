@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Welcome</title>
+</head>
+
+<body>
+
+    {% block content %}
+    <div class="main">
+        <h1 class="main_content">Sign up</h1>
+        <div class="messages">
+            {% if messages %} {% for message in messages %}
+            <p{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</p>
+                {% endfor %} {% endif %}
+        </div>
+        <form method="post" action="/signup">
+            {% csrf_token %}
+            <label class="main_content">Name: </label>
+            <input class="main_content" type="text" name="username" id="username"><br>
+            <label class="main_content">Email: </label>
+            <input class="main_content" type="email" name="email"><br>
+            <label class="main_content">Password: </label>
+            <input class="main_content" type="password" name="password"><br>
+            <label class="main_content">Referal Code: </label>
+            <input class="main_content" type="text" name="referal"><br>
+            <input class="submit_btn" type="submit" value="Sign up">
+        </form>
+    </div>
+    {% endblock %}
+
+</body>
+
+</html>
